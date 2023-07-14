@@ -1,0 +1,57 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+    char string_1[100];
+    char string_2[100];
+
+    cout << "ENTER STRING 1 : ";
+    cin.getline(string_1, 100);
+    cout << "ENTER STRING 2 : ";
+    cin.getline(string_2, 100);
+
+    // strlen
+    cout << endl;
+    cout << "LENGTH OF STRING 1 IS : " << strlen(string_1);
+    cout << endl;
+    cout << "LENGTH OF STRING 2 IS : " << strlen(string_2);
+
+    // strstr
+    cout << endl
+         << endl;
+    if (strstr(string_1, string_2) != NULL)
+    {
+        cout << "THE SAME PART OF STRING 2 IN STRING 1 IS:";
+        cout << strstr(string_1, string_2);
+    }
+    else
+    {
+        cout << "NOT SIMILARITIES FOUND";
+    }
+
+    // strcat
+    cout << endl;
+    cout << "THE COMBINATION OF THE 2 STRINGS IS: " << strcat(string_1, string_2);
+    // strncat
+    cout << endl;
+    cout << "THE COMBINATION OF THE 2 STRINGS till 3 places IS : " << strncat(string_1, string_2, 2);
+
+    // strcmp
+    cout << endl
+         << endl;
+    cout << "THE COMPARISON OF STRING 1 & STRING 2 IS :" << strcmp(string_1, string_2);
+
+    // strrchr
+    cout << endl;
+    cout << "PRESENCE OF 'a' in the string 1 from right: " << strrchr(string_1, 'a');
+    // strchr
+    cout << endl;
+    cout << "PRESENCE OF 'a' in the string 2 from left: " << strrchr(string_2, 'a');
+
+    // strtok=tokeniser.
+    // strtof=str to float.
+    // strtol= str to long.
+
+    return 0;
+}
